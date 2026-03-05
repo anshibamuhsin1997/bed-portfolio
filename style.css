@@ -44,6 +44,14 @@ nav a:hover{
 color:#4CAF50;
 }
 
+.dark nav a{
+color:white;
+}
+
+.dark nav{
+background:#1f1f1f;
+}
+
 .hero{
 height:90vh;
 display:flex;
