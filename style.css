@@ -198,6 +198,15 @@ padding:12px;
 border-bottom:1px solid #eee;
 }
 
+.dark nav{
+background:#1f1f1f;
+}
+
+.dark nav a{
+color:white;
+border-bottom:1px solid #333;
+}
+
 .menu-toggle{
 display:block;
 }
