@@ -1,183 +1,628 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshiba T | Physical Science Educator</title>
+    <meta name="description"
+        content="Portfolio of Anshiba T, a passionate B.Ed Physical Science student and future science educator.">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<title>Ruwa Mehak | B.Ed Teaching Portfolio</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#14B8A6',
+                        accent: '#F59E0B',
+                        background: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<script src="https://unpkg.com/scrollreveal"></script>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-<header>
-
-<div class="logo">Ruwa Mehak</div>
-
-<nav id="navMenu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#practice">Teaching</a>
-<a href="#lesson">Lesson Plans</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="menu-toggle" id="menuBtn">☰</div>
-
-<button id="themeToggle" class="theme-btn">
-<span id="themeIcon">🌙</span>
-<span id="themeText">Dark</span>
-</button>
-
-</header>
-
-
-<section id="home" class="hero">
-
-<div class="hero-content">
-
-<img src="images/profile.png" class="profile">
-
-<h1>Ruwa Mehak</h1>
-
-<h3>B.Ed Student | Physical Science | University of Calicut</h3>
-
-<p>
-Welcome to my professional teaching portfolio where I share my
-teaching practice, lesson plans and educational activities.
-</p>
-
-<a href="#about" class="btn">Explore Portfolio</a>
-
-</div>
-
-</section>
-
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Profile</h3>
-<p>B.Ed student specializing in Physical Science under University of Calicut.</p>
-</div>
-
-<div class="card">
-<h3>Education</h3>
-<p>B.Ed – University of Calicut</p>
-<p>Bachelor Degree – Physical Science</p>
-</div>
-
-<div class="card">
-<h3>Teaching Philosophy</h3>
-<p>Science education should inspire curiosity, experimentation and logical thinking.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="practice">
-
-<h2>Teaching Practice</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>Government Higher Secondary School</h3>
-
-<p>Subject: Physical Science</p>
-
-<p>Classes Handled: 8 & 9</p>
-
-<p>Duration: 40 Days Teaching Practice</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="lesson">
-
-<h2>Lesson Plans</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>Energy Lesson Plan</h3>
-
-<p>Class 8 Physical Science</p>
-
-<a href="documents/lesson-plan1.pdf">Download</a>
-
-</div>
-
-<div class="card">
-
-<h3>Electric Circuit Lesson</h3>
-
-<p>ICT Teaching Method</p>
-
-<a href="documents/lesson-plan2.pdf">Download</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="gallery">
-
-<h2>Gallery</h2>
-
-<div class="gallery">
-
-<img src="images/teaching1.jpg">
-<img src="images/teaching2.jpg">
-
-</div>
-
-</section>
-
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: example@email.com</p>
-<p>Phone: +91 XXXXXXXX</p>
-<p>Location: Kerala, India</p>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Ruwa Mehak | B.Ed Teaching Portfolio</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+<body class="font-sans antialiased bg-background text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-[1400px] mx-auto px-6 sm:px-12 lg:px-20">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="font-heading font-black text-2xl text-[#1E3A8A] tracking-tight">Anshiba<span
+                            class="text-[#14B8A6]">.</span></span>
+                </div>
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#about"
+                        class="text-[15px] font-medium text-[#4B5563] hover:text-[#1E3A8A] transition-colors">About</a>
+                    <a href="#education"
+                        class="text-[15px] font-medium text-[#4B5563] hover:text-[#1E3A8A] transition-colors">Education</a>
+                    <a href="#skills"
+                        class="text-[15px] font-medium text-[#4B5563] hover:text-[#1E3A8A] transition-colors">Skills</a>
+                    <a href="#portfolio"
+                        class="text-[15px] font-medium text-[#4B5563] hover:text-[#1E3A8A] transition-colors">Portfolio</a>
+                    <a href="#gallery"
+                        class="text-[15px] font-medium text-[#4B5563] hover:text-[#1E3A8A] transition-colors">Gallery</a>
+                    <a href="#contact"
+                        class="px-6 py-2.5 rounded-full bg-[#1E3A8A] text-white text-[15px] font-semibold hover:bg-[#152e75] transition-colors shadow-md">Contact
+                        Me</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn"
+                        class="text-gray-700 hover:text-primary focus:outline-none focus:text-primary">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#1E3A8A] hover:bg-gray-50">About</a>
+                <a href="#education"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#1E3A8A] hover:bg-gray-50">Education</a>
+                <a href="#skills"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#1E3A8A] hover:bg-gray-50">Skills</a>
+                <a href="#portfolio"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#1E3A8A] hover:bg-gray-50">Portfolio</a>
+                <a href="#gallery"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#1E3A8A] hover:bg-gray-50">Gallery</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-[#1E3A8A] font-bold hover:bg-gray-50">Contact
+                    Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero"
+        class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#eff3f8]">
+        <!-- Three.js Canvas Container (Optional: can keep or make it very subtle) -->
+        <div id="canvas-container"></div>
+
+        <!-- Hero Content (Matching Ref Image 2) -->
+        <div
+            class="relative z-10 w-full px-4 sm:px-12 md:px-20 mx-auto flex flex-col items-center text-center hero-content parallax-bg mt-6">
+            <div
+                class="bg-white px-8 py-10 md:px-16 md:py-16 rounded-[32px] w-full max-w-7xl mx-auto shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col items-center">
+
+                <p class="text-[#14B8A6] font-bold tracking-[0.15em] text-sm md:text-base mb-4 uppercase">
+                    Welcome to my portfolio
+                </p>
+
+                <h1
+                    class="text-4xl sm:text-5xl md:text-7xl font-heading font-black mb-4 text-[#1E293B] leading-tight flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+                    <span>Hi, I'm</span>
+                    <span class="text-[#14B8A6]">Anshiba T</span>
+                </h1>
+
+                <h2 class="text-xl sm:text-2xl md:text-3xl font-medium text-[#1E3A8A] mb-6">
+                    B.Ed Physical Science Student <span class="text-gray-300 mx-2">|</span> Future Science Educator
+                </h2>
+
+                <p class="text-gray-500 text-base md:text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Passionate about inspiring young minds through innovative science education, practical experiments,
+                    and student-centered learning.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="#portfolio"
+                        class="w-full sm:w-auto px-8 py-4 rounded-full bg-[#1E3A8A] text-white font-semibold hover:bg-[#152e75] transition-colors shadow-lg flex items-center justify-center group">
+                        View Portfolio <i
+                            class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="#"
+                        class="w-full sm:w-auto px-8 py-4 rounded-full bg-white border border-gray-200 text-[#1E3A8A] font-semibold hover:bg-gray-50 transition-colors shadow-sm flex items-center justify-center group">
+                        Download Resume <i
+                            class="fas fa-download ml-2 text-sm group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Scroll Indicator (Inside the card or just below it) -->
+                <div class="mt-10 animate-bounce">
+                    <a href="#about" class="text-gray-400 hover:text-[#1E3A8A] transition-colors">
+                        <i class="fas fa-chevron-down text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 about-reveal">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="about-reveal flex justify-center">
+                    <div
+                        class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden glass shadow-xl border-4 border-white">
+                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
+                            <i class="fas fa-user-graduate text-6xl"></i>
+                            <span class="sr-only">Profile Image</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-reveal space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        <strong class="text-primary font-semibold text-xl">Anshiba T</strong> is a dedicated Physical
+                        Science educator currently pursuing B.Ed at EMEA Training College, Kondotty (University of
+                        Calicut).
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        With a strong academic background in Chemistry, she focuses on innovative teaching methodologies
+                        that encourage curiosity, critical thinking, and scientific exploration among students.
+                    </p>
+
+                    <div
+                        class="bg-background p-6 rounded-xl border border-gray-100 shadow-sm mt-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-heading font-semibold text-primary mb-4">Teaching Philosophy</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start"><i
+                                    class="fas fa-check-circle text-secondary mt-1 mr-3"></i><span
+                                    class="text-gray-700">Concept-based learning</span></li>
+                            <li class="flex items-start"><i
+                                    class="fas fa-check-circle text-secondary mt-1 mr-3"></i><span
+                                    class="text-gray-700">Practical science experiments</span></li>
+                            <li class="flex items-start"><i
+                                    class="fas fa-check-circle text-secondary mt-1 mr-3"></i><span
+                                    class="text-gray-700">Student engagement through activities</span></li>
+                            <li class="flex items-start"><i
+                                    class="fas fa-check-circle text-secondary mt-1 mr-3"></i><span
+                                    class="text-gray-700">Technology-integrated classrooms</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-background relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 edu-reveal">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-4">Education Journey</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative py-12">
+                <div class="timeline-line hidden md:block"></div>
+
+                <div class="space-y-16">
+                    <div class="relative w-full flex flex-col md:flex-row justify-between items-center edu-card">
+                        <div class="timeline-dot hidden md:block"></div>
+                        <div class="w-full md:w-[45%] md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-2">B.Ed Physical Science</h3>
+                            <p class="text-gray-600 font-medium text-lg">EMEA Training College, Kondotty</p>
+                            <p class="text-gray-500 text-sm">University of Calicut</p>
+                        </div>
+                        <div class="w-full md:w-[45%] md:pl-12">
+                            <div
+                                class="glass p-6 rounded-2xl border-l-4 border-secondary shadow-lg hover:shadow-xl transition-shadow bg-white">
+                                <p class="text-secondary font-bold text-xl mb-3 flex items-center"><i
+                                        class="far fa-calendar-alt mr-2"></i> 2024 – Present</p>
+                                <p class="text-gray-700">Currently pursuing professional teaching qualification,
+                                    focusing on modern instructional methods.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative w-full flex flex-col md:flex-row-reverse justify-between items-center edu-card">
+                        <div class="timeline-dot hidden md:block"></div>
+                        <div class="w-full md:w-[45%] md:pl-12 mb-6 md:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-2">M.Sc Chemistry</h3>
+                            <p class="text-gray-600 font-medium text-lg">KAHM Unity Women's College, Manjeri</p>
+                            <p class="text-gray-500 text-sm">University of Calicut</p>
+                        </div>
+                        <div class="w-full md:w-[45%] md:pr-12 md:text-right">
+                            <div
+                                class="glass p-6 rounded-2xl border-r-4 border-accent shadow-lg hover:shadow-xl transition-shadow bg-white">
+                                <p class="text-accent font-bold text-xl mb-3 flex md:justify-end items-center"><i
+                                        class="far fa-calendar-alt mr-2"></i> 2022 – 2024</p>
+                                <p class="text-gray-700">Master's degree emphasizing advanced chemical principles and
+                                    laboratory research.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative w-full flex flex-col md:flex-row justify-between items-center edu-card">
+                        <div class="timeline-dot hidden md:block"></div>
+                        <div class="w-full md:w-[45%] md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-2xl font-bold text-primary mb-2">B.Sc Chemistry</h3>
+                            <p class="text-gray-600 font-medium text-lg">KAHM Unity Women's College, Manjeri</p>
+                            <p class="text-gray-500 text-sm">University of Calicut</p>
+                        </div>
+                        <div class="w-full md:w-[45%] md:pl-12">
+                            <div
+                                class="glass p-6 rounded-2xl border-l-4 border-primary shadow-lg hover:shadow-xl transition-shadow bg-white">
+                                <p class="text-primary font-bold text-xl mb-3 flex items-center"><i
+                                        class="far fa-calendar-alt mr-2"></i> 2019 – 2022</p>
+                                <p class="text-gray-700">Bachelor's degree establishing strong foundational knowledge in
+                                    all branches of chemistry.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 skill-reveal">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-4">Teaching Skills</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Skill 1 -->
+                <div class="flex flex-col items-center skill-reveal">
+                    <div class="relative w-32 h-32 flex items-center justify-center mb-4">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#e2e8f0" stroke-width="8" />
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#1E3A8A" stroke-width="8"
+                                stroke-dasharray="283" stroke-dashoffset="28" class="progress-ring__circle" />
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <i class="fas fa-flask text-2xl text-primary mb-1"></i>
+                            <span class="font-bold text-gray-700">90%</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 text-center">Chemistry Skills</h3>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="flex flex-col items-center skill-reveal">
+                    <div class="relative w-32 h-32 flex items-center justify-center mb-4">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#e2e8f0" stroke-width="8" />
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#14B8A6" stroke-width="8"
+                                stroke-dasharray="283" stroke-dashoffset="42" class="progress-ring__circle" />
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <i class="fas fa-book-open text-2xl text-secondary mb-1"></i>
+                            <span class="font-bold text-gray-700">85%</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 text-center">Lesson Planning</h3>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="flex flex-col items-center skill-reveal">
+                    <div class="relative w-32 h-32 flex items-center justify-center mb-4">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#e2e8f0" stroke-width="8" />
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#F59E0B" stroke-width="8"
+                                stroke-dasharray="283" stroke-dashoffset="56" class="progress-ring__circle" />
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <i class="fas fa-users text-2xl text-accent mb-1"></i>
+                            <span class="font-bold text-gray-700">80%</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 text-center">Classroom Mgmt</h3>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="flex flex-col items-center skill-reveal">
+                    <div class="relative w-32 h-32 flex items-center justify-center mb-4">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#e2e8f0" stroke-width="8" />
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#1E3A8A" stroke-width="8"
+                                stroke-dasharray="283" stroke-dashoffset="70" class="progress-ring__circle" />
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <i class="fas fa-laptop-code text-2xl text-primary mb-1"></i>
+                            <span class="font-bold text-gray-700">75%</span>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 text-center">Ed Tech Tools</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-background relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 portfolio-reveal">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-4">Teaching Portfolio</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass bg-white 
+                        p-8 rounded-2xl shadow-lg border-t-4 
+                        border-primary hover:-translate-y-2 
+                        transition-transform duration-300 portfolio-card"
+                    style="translate: none;rotate: none;scale: none;opacity: 1;transform: translate(0px, 0px);">
+                    <div class="w-14 h-14 bg-primary/10 
+                        rounded-full flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-clipboard-list text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lesson Plan Development</h3>
+                    <p class="text-gray-600">Designed structured and engaging lesson plans aligned with modern
+                        educational standards and student learning objectives.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass bg-white
+                     p-8 rounded-2xl shadow-lg border-t-4 
+                     border-secondary hover:-translate-y-2 
+                     transition-transform duration-300 portfolio-card"
+                    style="translate: none;rotate: none;scale: none;opacity: 1;transform: translate(0px, 0px);">
+                    <div class="w-14 h-14 bg-secondary/10 
+                        rounded-full flex items-center justify-center mb-6 text-secondary">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovative Methods</h3>
+                    <p class="text-gray-600">Implemented activity-based and experiment-driven science teaching to move
+                        beyond rote memorization.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass bg-white 
+                        p-8 rounded-2xl shadow-lg border-t-4 
+                        border-accent hover:-translate-y-2 
+                        transition-transform duration-300 portfolio-card"
+                    style="translate: none;rotate: none;scale: none;opacity: 1;transform: translate(0px, 0px);">
+                    <div class="w-14 h-14 bg-accent/10 
+                        rounded-full flex items-center justify-center mb-6 text-accent">
+                        <i class="fas fa-clipboard-list text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lesson Plan Development</h3>
+                    <p class="text-gray-600">Designed structured and engaging lesson plans aligned with modern
+                        educational standards and student learning objectives.</p>
+                </div>
+            </div>
+
+            <!-- Internship Card -->
+            <div
+                class="mt-16 glass bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 flex flex-col md:flex-row gap-8 items-center portfolio-reveal">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div
+                        class="w-48 h-48 bg-gray-100 rounded-full flex items-center justify-center text-primary border-4 border-dashed border-gray-300">
+                        <i class="fas fa-school text-6xl"></i>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <span class="text-sm font-bold text-secondary uppercase tracking-wider">Teaching Internship</span>
+                    <h3 class="text-3xl font-heading font-bold text-gray-900 mt-2 mb-2">EMEA Higher Secondary School
+                    </h3>
+                    <p class="text-gray-500 mb-6"><i class="fas fa-map-marker-alt mr-2"></i>Thurakkal, Kondotty | <i
+                            class="far fa-clock ml-4 mr-2"></i>2 Months</p>
+
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Conducted
+                            Physical Science classes</li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Prepared
+                            evaluation materials</li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Organized
+                            science activities</li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Assisted in
+                            classroom management</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="mt-8 glass bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 flex flex-col md:flex-row gap-8 items-center portfolio-reveal">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div
+                        class="w-48 h-48 bg-gray-100 rounded-full flex items-center justify-center text-primary border-4 border-dashed border-gray-300">
+                        <i class="fas fa-school text-6xl"></i>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <span class="text-sm font-bold text-secondary uppercase tracking-wider">Teaching Internship</span>
+                    <h3 class="text-3xl font-heading font-bold text-gray-900 mt-2 mb-2">G M U P SCHOOL, Kondotty
+                    </h3>
+                    <p class="text-gray-500 mb-6"><i class="fas fa-map-marker-alt mr-2"></i>Kondotty | <i
+                            class="far fa-clock ml-4 mr-2"></i>2 Months</p>
+
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Conducted
+                            Physical Science classes</li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Prepared
+                            evaluation materials</li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Organized
+                            science activities</li>
+                        <li class="flex items-start"><i class="fas fa-check text-secondary mt-1 mr-3"></i>Assisted in
+                            classroom management</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 gallery-reveal">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-4">Gallery</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">A glimpse into my teaching journey, laboratory work, and
+                    seminar presentations.</p>
+            </div>
+
+            <div class="masonry gallery-reveal">
+                <!-- Gallery Item 1 -->
+                <div class="masonry-item rounded-2xl overflow-hidden cursor-pointer group relative bg-gray-200">
+                    <div class="aspect-[4/3] bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-camera text-4xl text-gray-400"></i>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white font-semibold text-lg">Teaching Practice</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="masonry-item rounded-2xl overflow-hidden cursor-pointer group relative bg-gray-200">
+                    <div class="aspect-[3/4] bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-flask text-4xl text-gray-400"></i>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white font-semibold text-lg">Science Experiments</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="masonry-item rounded-2xl overflow-hidden cursor-pointer group relative bg-gray-200">
+                    <div class="aspect-[4/5] bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-users text-4xl text-gray-400"></i>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-accent/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white font-semibold text-lg">Classroom Interaction</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="masonry-item rounded-2xl overflow-hidden cursor-pointer group relative bg-gray-200">
+                    <div class="aspect-[16/9] bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-chalkboard-teacher text-4xl text-gray-400"></i>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <p class="text-white font-semibold text-lg">Seminar Presentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="pt-20 pb-10 bg-primary relative overflow-hidden">
+        <!-- Abstract shape -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <svg class="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 text-white/5 w-96 h-96"
+                fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50" />
+            </svg>
+            <svg class="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2 text-secondary/10 w-full h-full"
+                fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="50" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 contact-reveal">
+                <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-accent mx-auto rounded-full"></div>
+                <p class="text-blue-100 mt-6 max-w-2xl mx-auto">Feel free to reach out for educational discussions,
+                    teaching opportunities, or just to say hello.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-accent shrink-0">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </div>
+                    <div class="ml-6">
+                        <h4 class="text-white font-bold text-lg">Location</h4>
+                        <p class="text-blue-100 mt-1">EMEA Training College, Kondotty<br>University of Calicut</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-accent shrink-0">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </div>
+                    <div class="ml-6">
+                        <h4 class="text-white font-bold text-lg">Email</h4>
+                        <p class="text-blue-100 mt-1">anshiba@example.com</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-accent shrink-0">
+                        <i class="fas fa-phone-alt text-xl"></i>
+                    </div>
+                    <div class="ml-6">
+                        <h4 class="text-white font-bold text-lg">Phone</h4>
+                        <p class="text-blue-100 mt-1">+91 90000 00000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form
+                <div class="glass-dark p-8 rounded-2xl border border-white/20 shadow-2xl contact-reveal">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-white text-sm font-medium mb-2" for="name">Name</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
+                                type="text" id="name" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-white text-sm font-medium mb-2" for="email">Email</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
+                                type="email" id="email" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-white text-sm font-medium mb-2" for="message">Message</label>
+                            <textarea
+                                class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-blue-200 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors h-32 resize-none"
+                                id="message" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full py-4 rounded-lg bg-accent text-white font-bold text-lg hover:bg-yellow-500 transition-colors btn-glow shadow-lg shadow-accent/30">
+                            Send Message
+                        </button>
+                    </form>
+                </div> -->
+        </div>
+
+        <!-- Footer -->
+        <div
+            class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-blue-100 text-sm">
+            <p>&copy; 2026 Anshiba T | Future Science Educator</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fas fa-envelope text-xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Scripts will be loaded here -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="three-bg.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
